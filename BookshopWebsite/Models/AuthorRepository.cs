@@ -1,4 +1,6 @@
-﻿namespace BookshopWebsite.Models
+﻿using BookshopWebsite.Models.Data;
+
+namespace BookshopWebsite.Models
 {
     public class AuthorRepository : IAuthorRepository
     {

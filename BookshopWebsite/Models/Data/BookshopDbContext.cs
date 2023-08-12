@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace BookshopWebsite.Models
+namespace BookshopWebsite.Models.Data
 {
     public class BookshopDbContext : DbContext
     {
@@ -13,7 +13,7 @@ namespace BookshopWebsite.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>().HasData(
-                new Category { CategoryId = 1, Name = "Fiction"},
+                new Category { CategoryId = 1, Name = "Fiction" },
                 new Category { CategoryId = 2, Name = "Mystery" },
                 new Category { CategoryId = 3, Name = "Biography" },
                 new Category { CategoryId = 4, Name = "Science Fiction" },
@@ -32,7 +32,7 @@ namespace BookshopWebsite.Models
                 new Author { AuthorId = 10, Name = "Leo Tolstoy" });
 
             modelBuilder.Entity<Book>().HasData(
-                new Book { BookId = 1, Title = "The fellowship of the ring", Price = 10, InStock = true, ImageUrl="", AuthorId = 1, CategoryId = 1},
+                new Book { BookId = 1, Title = "The fellowship of the ring", Price = 10, InStock = true, ImageUrl = "", AuthorId = 1, CategoryId = 1 },
                 new Book { BookId = 2, Title = "Harry Potter and the Sorcerer's Stone", Price = 12, InStock = true, ImageUrl = "", AuthorId = 2, CategoryId = 1 },
                 new Book { BookId = 3, Title = "1984", Price = 8, InStock = true, ImageUrl = "", AuthorId = 3, CategoryId = 1 },
                 new Book { BookId = 4, Title = "Murder on the Orient Express", Price = 9, InStock = true, ImageUrl = "", AuthorId = 4, CategoryId = 2 },
