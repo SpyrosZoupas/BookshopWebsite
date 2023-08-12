@@ -1,4 +1,5 @@
 using BookshopWebsite.Models;
+using BookshopWebsite.Models.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -34,5 +35,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+DbInitialiser.Seed(app);
 
 app.Run();
