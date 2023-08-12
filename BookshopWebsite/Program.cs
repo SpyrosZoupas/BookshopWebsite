@@ -1,7 +1,18 @@
+using BookshopWebsite.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+//Add services
+builder.Services.AddScoped<IBookRepository, BookRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
+
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<BookshopDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration["ConnectionStrings:BookshopDbContextConnection"]);
+});
 
 var app = builder.Build();
 
