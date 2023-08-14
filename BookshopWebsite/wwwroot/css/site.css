@@ -1,5 +1,15 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(204, 186, 186)
+}
+
 html {
   font-size: 14px;
+
 }
 
 @media (min-width: 768px) {
