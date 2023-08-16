@@ -22,16 +22,18 @@
                 {
                     context.Books.AddRange
                     (
-                         new Book { Title = "The fellowship of the ring", Price = 10, InStock = true, ImageUrl = "", Category = Categories["Fiction"], Author = Authors["J.R.R. Tolkien"] },
-                         new Book { Title = "Harry Potter and the Sorcerer's Stone", Price = 12, InStock = true, ImageUrl = "", Category = Categories["Fiction"], Author = Authors["J.K. Rowling"] },
-                         new Book { Title = "1984", Price = 8, InStock = true, ImageUrl = "", Category = Categories["Fiction"], Author = Authors["George Orwell"] },
-                         new Book { Title = "Murder on the Orient Express", Price = 9, InStock = true, ImageUrl = "", Category = Categories["Mystery"], Author = Authors["Agatha Christie"] },
-                         new Book { Title = "The Shining", Price = 11, InStock = true, ImageUrl = "", Category = Categories["Fiction"], Author = Authors["Stephen King"] },
-                         new Book { Title = "Pride and Prejudice", Price = 7, InStock = true, ImageUrl = "", Category = Categories["Fiction"], Author = Authors["Jane Austen"] },
-                         new Book { Title = "The Adventures of Huckleberry Finn", Price = 9, InStock = true, ImageUrl = "", Category = Categories["Fiction"], Author = Authors["Mark Twain"] },
-                         new Book { Title = "To Kill a Mockingbird", Price = 10, InStock = true, ImageUrl = "", Category = Categories["Fiction"], Author = Authors["Harper Lee"] },
-                         new Book { Title = "The Old Man and the Sea", Price = 8, InStock = true, ImageUrl = "", Category = Categories["Fiction"], Author = Authors["Ernest Hemingway"] },
-                         new Book { Title = "War and Peace", Price = 15, InStock = true, ImageUrl = "", Category = Categories["History"], Author = Authors["Leo Tolstoy"] }
+                         new Book { Title = "The fellowship of the ring", Price = 10, InStock = true, ImageUrl = "~/images/fellowship_of_the_ring.jpg", Category = Categories["Fiction"], Author = Authors["J.R.R. Tolkien"] },
+                         new Book { Title = "Harry Potter and the Sorcerer's Stone", Price = 12, InStock = true, ImageUrl = "~/images/harry_potter_and_the_sorcerers_stone.jpg", Category = Categories["Fiction"], Author = Authors["J.K. Rowling"] },
+                         new Book { Title = "1984", Price = 8, InStock = true, ImageUrl = "~/images/1984.jpg", Category = Categories["Fiction"], Author = Authors["George Orwell"] },
+                         new Book { Title = "Murder on the Orient Express", Price = 9, InStock = true, ImageUrl = "~/images/murder_on_the_orient_express.jpg", Category = Categories["Mystery"], Author = Authors["Agatha Christie"] },
+                         new Book { Title = "The Shining", Price = 11, InStock = true, ImageUrl = "~/images/the_shining.jpg", Category = Categories["Fiction"], Author = Authors["Stephen King"] },
+                         new Book { Title = "Pride and Prejudice", Price = 7, InStock = true, ImageUrl = "~/images/pride_and_prejudice.jpg", Category = Categories["Fiction"], Author = Authors["Jane Austen"] },
+                         new Book { Title = "The Adventures of Huckleberry Finn", Price = 9, InStock = true, ImageUrl = "~/images/the_adventures_of_huckleberry_finn.jpg", Category = Categories["Fiction"], Author = Authors["Mark Twain"] },
+                         new Book { Title = "To Kill a Mockingbird", Price = 10, InStock = true, ImageUrl = "~/images/to_kill_a_mockingbird.jpg", Category = Categories["Fiction"], Author = Authors["Harper Lee"] },
+                         new Book { Title = "The Old Man and the Sea", Price = 8, InStock = true, ImageUrl = "~/images/the_old_man_and_the_sea.jpg", Category = Categories["Fiction"], Author = Authors["Ernest Hemingway"] },                        
+                         new Book { Title = "War and Peace", Price = 15, InStock = true, ImageUrl = "~/images/war_and_peace.jpg", Category = Categories["History"], Author = Authors["Leo Tolstoy"] },
+                         new Book { Title = "The return of the king", Price = 17, InStock = true, ImageUrl = "~/images/return_of_the_king.png", Category = Categories["Fiction"], Author = Authors["J.R.R. Tolkien"] }
+
                     );
                 }
 
