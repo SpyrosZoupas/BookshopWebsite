@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Book>
+
+<div class="book-grid">
+    @foreach (var book in Model)
+    {
+        <img src="@Url.Content(book.ImageUrl)" alt="@book.Title">
+    }   
+</div>
