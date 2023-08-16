@@ -1,8 +1,15 @@
 ﻿@model IEnumerable<Book>
 
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css">
+    <link rel="stylesheet" type="text/css" href="~/css/Books.css">
+</head>
 <div class="book-grid">
     @foreach (var book in Model)
     {
-        <img src="@Url.Content(book.ImageUrl)" alt="@book.Title">
+        <div class="book-item">
+            <img src="@Url.Content(book.ImageUrl)" alt="@book.Title">
+            <h3>@book.Title</h3>
+        </div>
     }   
 </div>

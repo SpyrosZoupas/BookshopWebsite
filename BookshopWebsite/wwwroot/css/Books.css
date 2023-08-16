@@ -1,1 +1,23 @@
-﻿
+﻿.book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    justify-content: center;
+    grid-gap: 25px 70px;
+    margin: 30px;
+}
+
+.book-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-item img {
+    width: 100%; 
+    height: 400px;
+}
+
+.book-item h2 {
+    margin-top: 10px;
+    text-align: center;
+}
