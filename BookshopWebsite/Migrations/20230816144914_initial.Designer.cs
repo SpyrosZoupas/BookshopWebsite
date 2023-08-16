@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookshopWebsite.Migrations
 {
     [DbContext(typeof(BookshopDbContext))]
-    [Migration("20230812182515_MigrationInsertData")]
-    partial class MigrationInsertData
+    [Migration("20230816144914_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
