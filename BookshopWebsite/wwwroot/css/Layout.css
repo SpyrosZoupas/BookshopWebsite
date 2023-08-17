@@ -26,6 +26,13 @@
 }
 
 .title {
-    margin-left: 40px;
-    width: 110px;
+    display: flex;
+    width: 100%;
+    background-color: #ba98c38f;
 }
+
+.title img {
+    width: 110px;
+    margin-left: 40px;
+}
+
