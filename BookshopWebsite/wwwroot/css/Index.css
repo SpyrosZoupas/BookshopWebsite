@@ -1,12 +1,4 @@
-﻿* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Verdana, sans-serif;
-}
-
-/* Slideshow container */
+﻿/* Slideshow container */
 .slideshow-container {
     background-color: rgb(238, 223, 234);
     border: 1px solid black;
