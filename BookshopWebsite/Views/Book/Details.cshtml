@@ -4,26 +4,29 @@
     <link rel="stylesheet" type="text/css" href="~/css/site.css">
     <link rel="stylesheet" type="text/css" href="~/css/Details.css">
 </head>
+
 <div class="container">
     <img src="@Url.Content(Model.ImageUrl)" alt="@Model.Title" />
-    <h3>
-        @Model.Title
-    </h3>
-    <h4>@Model.Author.Name</h4>
-    <h4>@Model.Category.Name</h4>
-    <h5>@Model.NumberOfPages</h5>
-    <p>@Model.ReleaseDate</p>
-    @if (Model.InStock == true)
-    {
-        <p>In Stock</p>
-    }
-    else
-    {
-        <p>Sorry, this book is out of stock</p>
-    }
 
-    <h3>@Model.Price.ToString("c")</h3>
+    <div class="book-details">
+        <h1>@Model.Title</h1>
+        <h2>@Model.Author.Name</h2>
+        <h2>@Model.Category.Name</h2>
+        <p>@Model.NumberOfPages</p>
+        <p>@Model.ReleaseDate</p>
 
-    <p>@Model.Description</p>
+        @if (Model.InStock)
+        {
+            <p class="stock">In Stock</p>
+        }
+        else
+        {
+            <p class="out-of-stock">Sorry, this book is out of stock</p>
+        }
+
+        <p class="price">@Model.Price.ToString("c")</p>
+    </div>
 </div>
+<p class="description">@Model.Description</p>
+
 
