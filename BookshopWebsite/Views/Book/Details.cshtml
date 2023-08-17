@@ -9,7 +9,8 @@
     <h3>
         @Model.Title
     </h3>
-    <h4>@Model.Author</h4>
+    <h4>@Model.Author.Name</h4>
+    <h4>@Model.Category.Name</h4>
     <h5>@Model.NumberOfPages</h5>
     <p>@Model.ReleaseDate</p>
     @if (Model.InStock == true)

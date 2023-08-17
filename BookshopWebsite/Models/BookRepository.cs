@@ -1,4 +1,5 @@
 ﻿using BookshopWebsite.Models.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookshopWebsite.Models
 {
@@ -13,6 +14,6 @@ namespace BookshopWebsite.Models
 
         public IEnumerable<Book> GetBooks() => _context.Books;
 
-        public Book? GetBookById(int id) => _context.Books.FirstOrDefault(b => b.BookId == id);
+        public Book? GetBookById(int id) => _context.Books.Include(a => a.Author).Include(c => c.Category).FirstOrDefault(b => b.BookId == id);
     }
 }
