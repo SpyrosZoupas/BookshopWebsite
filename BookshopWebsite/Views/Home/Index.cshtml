@@ -2,7 +2,76 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="~/css/site.css">
+<link rel="stylesheet" type="text/css" href="~/css/Index.css">
+</head>
+<body>
+
+<h2>Welcome to an online bookshop</h2>
+<p>You can choose any book you want</p>
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="@Url.Content("~/images/1984.jpg")">
+        </div>
+
+        <div class="mySlides">
+            <img src="@Url.Content("~/images/fellowship_of_the_ring.jpg")">
+        </div>
+
+        <div class="mySlides">
+            <img src="@Url.Content("~/images/war_and_peace.jpg")">
+        </div>
+
+        <div class="mySlides">
+            <img src="@Url.Content("~/images/two_towers.jpg")">
+        </div>
+
+        <div class="mySlides">
+            <img src="@Url.Content("~/images/return_of_the_king.png")">
+        </div>
+
+        <div class="mySlides">
+            <img src="@Url.Content("~/images/murder_on_the_orient_express.jpg")">
+        </div>
+    </div>
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    @section Scripts {
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+    }
+</body> 
