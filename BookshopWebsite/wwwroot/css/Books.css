@@ -21,3 +21,10 @@
     margin-top: 10px;
     text-align: center;
 }
+
+.book-item a {
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+    text-align: center;
+}

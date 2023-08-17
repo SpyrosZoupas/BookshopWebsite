@@ -1,0 +1,28 @@
+﻿@model Book
+
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css">
+    <link rel="stylesheet" type="text/css" href="~/css/Details.css">
+</head>
+<div class="container">
+    <img src="@Url.Content(Model.ImageUrl)" alt="@Model.Title" />
+    <h3>
+        @Model.Title
+    </h3>
+    <h4>@Model.Author</h4>
+    <h5>@Model.NumberOfPages</h5>
+    <p>@Model.ReleaseDate</p>
+    @if (Model.InStock == true)
+    {
+        <p>In Stock</p>
+    }
+    else
+    {
+        <p>Sorry, this book is out of stock</p>
+    }
+
+    <h3>@Model.Price.ToString("c")</h3>
+
+    <p>@Model.Description</p>
+</div>
+

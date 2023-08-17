@@ -8,8 +8,10 @@
     @foreach (var book in Model)
     {
         <div class="book-item">
-            <img src="@Url.Content(book.ImageUrl)" alt="@book.Title">
-            <h3>@book.Title</h3>
+            <a asp-controller="Book" asp-action="Details" asp-route-id="@book.BookId">
+                <img src="@Url.Content(book.ImageUrl)" alt="@book.Title">
+                <h3>@book.Title</h3>
+            </a>
         </div>
     }   
 </div>

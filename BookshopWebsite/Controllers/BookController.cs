@@ -17,5 +17,11 @@ namespace BookshopWebsite.Controllers
             var books = _bookRepository.GetBooks();
             return View(books);
         }
+
+        public IActionResult Details(int id)
+        {
+            var book = _bookRepository.GetBookById(id);
+            return View(book);
+        }
     }
 }
